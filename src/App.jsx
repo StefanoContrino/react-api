@@ -57,21 +57,21 @@ function App() {
 
 
           {maleActors.map(actor => {
-            return <div className='card'>
-              <div className='first'>
+            return <div className='card container-flex'>
+              <div className='first-sec'>
                 <img className='actor-img' src={actor.image} onError={(e) => {
                   e.target.src = "https://sites.duke.edu/dek23/wp-content/themes/koji/assets/images/default-fallback-image.png";
                 }} />
 
               </div>
-              <div className='second'>
+              <div className='second-sec'>
                 <h2>{actor.name}</h2>
                 <p className='birth-year'>{actor["birth_year"]}</p>
                 <p>{actor.nationality}</p>
-                <p className='actor-bio'>{actor.biography}</p>
+                <p className='text-sec'>{actor.biography}</p>
                 <p><strong>Awards:</strong> {actor.awards.join(", ")}</p>
                 {seeFilms && (
-                  <p className='actor-films'><strong>Known for: </strong>{actor["known_for"].join(", ")}</p>
+                  <p className='text-sec'><strong>Known for: </strong>{actor["known_for"].join(", ")}</p>
                 )}
               </div>
             </div>
@@ -85,7 +85,7 @@ function App() {
 
 
           {femaleActors.map(actor => {
-            return <div className='card'>
+            return <div className='card container-flex'>
               <div className='first'>
                 <img className='actor-img' src={actor.image} onError={(e) => {
                   e.target.src = "https://sites.duke.edu/dek23/wp-content/themes/koji/assets/images/default-fallback-image.png";
@@ -96,10 +96,10 @@ function App() {
                 <h2>{actor.name}</h2>
                 <p className='birth-year'>{actor["birth_year"]}</p>
                 <p>{actor.nationality}</p>
-                <p className='actor-bio'>{actor.biography}</p>
+                <p className='text-sec'>{actor.biography}</p>
                 <p><strong>Awards:</strong> {actor.awards}</p>
                 {seeFilms && (
-                  <p className='actor-films'><strong>Known for: </strong>{actor["most_famous_movies"].join(", ")}</p>
+                  <p className='text-sec'><strong>Known for: </strong>{actor["most_famous_movies"].join(", ")}</p>
                 )}
               </div>
             </div>
