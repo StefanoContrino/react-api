@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(100% / 3);
+  border: 1px solid black;
+  display: flex;
+}
+
+.actor-bio {
+  width: 90%;
+}
+
+.actor-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.birth-year {
+  color: grey;
+}
+
+.first {
+  width: 50%;
+}
+
+.second {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.second>h2 {
+  padding-bottom: 1rem;
+}
+
+.second>p {
+  padding-bottom: 0.5rem;
+}
